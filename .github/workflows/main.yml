@@ -20,6 +20,9 @@ jobs:
         run: |
           sh ./update-badge.sh
           
+          git config --global user.name "GitHub Workflow"
+          git config --global user.email "FireIsGood@users.noreply.github.com"
+          
           git add -A
           git commit -m "Chore: Update download count"
           git push
