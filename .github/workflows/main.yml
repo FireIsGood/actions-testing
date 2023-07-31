@@ -1,0 +1,21 @@
+name: Update README Download Count
+run-name: Updaing download count
+
+on:
+  schedule:
+  - cron: "0 12 * * 6"
+
+jobs:
+  job1:
+    name: Update download count
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2.3.2
+      - name: Modifiy the specific files using scripts
+        run: |
+          ls
+          sh ./update-badge.sh
+          git add -A
+          git commit -m "Chore: Update download count"
+          git push
