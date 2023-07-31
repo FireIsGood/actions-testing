@@ -18,7 +18,9 @@ jobs:
         
       - name: Modifiy the specific files using scripts
         run: |
-          sh ./update-badge.sh
+          DL=`curl -s "https://www.random.org/integers/?num=1&min=1&max=100&col=5&base=10&format=plain&rnd=new" | tr -d '[:blank:]'`
+          echo "Replacing number with $DL"
+          sed -i "/^\!\[Static Badge\]/c![Static Badge](https://img.shields.io/badge/label-$DL-7c3aed?style=plastic&logo=obsidian)" README.md
           
           git config --global user.name "GitHub Workflow"
           git config --global user.email "FireIsGood@users.noreply.github.com"
