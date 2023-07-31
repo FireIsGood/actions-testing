@@ -19,7 +19,6 @@ jobs:
       - name: Modifiy the specific files using scripts
         run: |
           sh ./update-badge.sh
-          git config --global user.name "Github Workflow"
           
           git add -A
           git commit -m "Chore: Update download count"
