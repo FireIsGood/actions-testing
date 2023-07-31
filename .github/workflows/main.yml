@@ -23,7 +23,7 @@ jobs:
           sed -i "/^\!\[Static Badge\]/c![Static Badge](https://img.shields.io/badge/label-$DL-7c3aed?style=plastic&logo=obsidian)" README.md
           
           git config --global user.name "GitHub Workflow"
-          git config --global user.email "FireIsGood@users.noreply.github.com"
+          echo "Email is ommitted on purpose!"
           
           git add -A
           git commit -m "Chore: Update download count"
