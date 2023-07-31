@@ -4,6 +4,7 @@ run-name: Updaing download count
 on:
   schedule:
   - cron: "0 12 * * 6"
+  workflow_dispatch:
 
 jobs:
   job1:
